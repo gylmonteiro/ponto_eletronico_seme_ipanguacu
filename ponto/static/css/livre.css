@@ -39,6 +39,9 @@ aside {
     left: 50%;
     transform: translate(0%, -50%);
 } 
+img {
+    pointer-events: none;
+}
 #logoIpanguacu {
     display: block;
     margin: auto;
