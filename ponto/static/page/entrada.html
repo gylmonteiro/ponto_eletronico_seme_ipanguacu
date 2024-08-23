@@ -15,7 +15,6 @@
         #hourParagraph {
             color: #0E3F6A;
         }
-
         #containerPersonBadge {
             display: flex;
             margin: 60px;
@@ -23,6 +22,7 @@
             justify-content: center;
         }
         #funcionario {
+            width: 24vw;
             display: block;
             color: gray;
             justify-content: center;
@@ -36,7 +36,7 @@
             font-size: 2vw;
         }
         #person_badge {
-            margin: 7px;
+            margin: 1px;
             filter: grayscale(100%);
         }
         #footerImg {
@@ -52,13 +52,11 @@
     <main>
         <form action="page/saida.html" method="post" id="formulario">
             <h1>PONTO ELETRÔNICO</h1>
-        
             <label for="digiteMatricula"><h2>Digite sua matrícula</h2></label>
             <div id="container-matricula">
                 <input type="number" id="digiteMatricula" autocomplete="off" required>
                 <button id="login"><img id="logar" src="../img/login.png"></button>
             </div>            
-            
             <div id="numeros">
                 <input type="button" class="tecladoNumerico" value="1" id="numeroUm">
                 <input type="button" class="tecladoNumerico" value="2" id="numeroDois">
@@ -78,7 +76,6 @@
                  <img src="../img/logoIpanguacu.png" id="footerImg">
             </footer>
         </form>
-
         <aside>
             <img src="../img/logoIpanguacu.png" id="logoIpanguacu">
             <p id="livre"><img src="../img/arrow-bar-right 1.png">ENTRADA</p>
@@ -89,18 +86,13 @@
                 </div>
             </div>
             <p id="containerData" class="timeParagraph"> <!--RECEBE A DATA (DIA DA SEMANA, DIA, MÊS, ANO)--></p>
-            
             <div id="containerPersonBadge">
                 <img src="../img/person-badge.png" id="person_badge">
                 <div id="funcionario">
-
-
                     <p class="usuario">Paulo Henrique Felipe Fagundes</p>
                     <p class="funcao">Desenvolvedor de Software</p>
                 </div>
-
             </div>
-
             <div id="containerBookmark">
                 <img src="../img/predio.png" id="bookmark">
             </div>
