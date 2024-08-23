@@ -12,7 +12,7 @@
 </head>
 <body>
     <main>
-        <form action="" method="post" id="formulario">
+        <form action="" method="POST" id="formulario">
             {% csrf_token %}
             <h1>PONTO ELETRÔNICO</h1>
         
@@ -37,24 +37,24 @@
                 <input type="button" value="⌫" id="backspace">
             </div>
             <footer>
-                <p>DESENVOLVIDO POR Gm Tech <br> <strong id="anoAtual"></strong></p>
+                <p>DESENVOLVIDO POR Gm Tech <br> <strong id="anoAtual"><!--RECEBE O ANO ATUAL--></strong></p>
             </footer>
         </form>
 
         <aside>
             <img src="{% static 'img/logoIpanguacu.png' %}" id="logoIpanguacu">
-            <p id="livre"><img src="{% static 'img/arrow-bar-right 1.png' %}"> LIVRE</p>
+            <p id="livre"><img src="{% static 'img/arrow-bar-right 1.png' %}">LIVRE</p>
             <div id="todo">
                 <div id="tempo">
-                    <img src="{% static 'img/clock-history 1.png' %}" id="clock">
+                    <img src="{% static 'img/relogio.png' %}" id="relogio">
                     <p id="hourParagraph" class="timeParagraph"></p>
                 </div>
             </div>
             <p id="containerData" class="timeParagraph"> <!--RECEBE A DATA (DIA DA SEMANA, DIA, MÊS, ANO)--></p>
             <div id="containerPersonBadge">
-                <img src="{% static 'img/person-badge-fill 1.png' %}" id="person_badge">
+                <img src="{% static 'img/person-badge.png' %}" id="person_badge">
                 <div id="containerBookmark">
-                    <img src="{% static 'img/bookmark 1.png' %}" id="bookmark">
+                    <img src="{% static 'img/bookmark.png' %}" id="bookmark">
                 </div>
             </div>
         </aside>
@@ -64,5 +64,6 @@
     <script src="{% static 'scripts/dia.js' %}"></script>
     <script src="{% static 'scripts/anoAtual.js' %}"></script>
     <script src="{% static 'scripts/tecladoNumerico.js' %}"></script>
+    <script src="{% static 'scripts/aprov.js' %}"></script>
 </body>
 </html>
