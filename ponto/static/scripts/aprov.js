@@ -8,10 +8,10 @@ const bookmark = document.getElementById('bookmark');
 
     if (matricula.length < 5) {
 
-        livre.style.filter = 'hue-rotate(-90deg)';
-        hora.style.filter = 'hue-rotate(-90deg)';
-        pessoa.style.filter = 'hue-rotate(-90deg)';
-        bookmark.style.filter = 'hue-rotate(-90deg)';
+        livre.style.backgroundColor = '#FFFFFF';
+        hora.style.backgroundColor = '#FFFFFF';
+        pessoa.style.backgroundColor = '#FFFFFF';
+        bookmark.style.backgroundColor = '#FFFFFF';
         event.preventDefault();
     }
 }

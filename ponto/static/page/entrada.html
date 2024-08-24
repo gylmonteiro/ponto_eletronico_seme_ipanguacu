@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS Local -->
-    <link rel="stylesheet" href="../css/livre.css">
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Controle de Ponto</title>
     <style>
@@ -53,8 +51,8 @@
         <form action="page/saida.html" method="post" id="formulario">
             <h1>PONTO ELETRÔNICO</h1>
             <label for="digiteMatricula"><h2>Digite sua matrícula</h2></label>
-            <div id="container-matricula">
-                <input type="number" id="digiteMatricula" autocomplete="off" required>
+            <div id="containerMatricula">
+                <input type="number" name="matricula" id="digiteMatricula" autocomplete="off" required>
                 <button id="login"><img id="logar" src="../img/login.png"></button>
             </div>            
             <div id="numeros">
@@ -72,13 +70,12 @@
                 <input type="button" value="⌫" id="backspace">
             </div>
             <footer>
-                <!-- <p>DESENVOLVIDO POR Gm Tech <br> <strong id="anoAtual">RECEBE O ANO ATUAL</strong></p> -->
                  <img src="../img/logoIpanguacu.png" id="footerImg">
             </footer>
         </form>
         <aside>
             <img src="../img/logoIpanguacu.png" id="logoIpanguacu">
-            <p id="livre"><img src="../img/arrow-bar-right 1.png">ENTRADA</p>
+            <p id="livre"><img src="../img/arrow.png">ENTRADA</p>
             <div id="todo">
                 <div id="tempo">
                     <img src="../img/relogio.png" id="relogio">
@@ -99,10 +96,10 @@
         </aside>
     </main>
     <!-- SCRIPTS -->
-    <script src="../scripts/horas.js"></script>
     <script src="../scripts/dia.js"></script>
+    <script src="../scripts/horas.js"></script>
+    <script src="../scripts/aprov.js"></script>
     <script src="../scripts/anoAtual.js"></script>
     <script src="../scripts/tecladoNumerico.js"></script>
-    <script src="../scripts/aprov.js"></script>
 </body>
 </html>

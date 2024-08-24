@@ -29,7 +29,6 @@ main {
     display: block;
     margin: auto;
     width: 30vw;
-    /* padding: 10vw; */
 }
 aside {
     width: 50vw;
@@ -74,7 +73,7 @@ h2 {
     border-radius: 10px;
     font-size: 60px;
 }
-#container-matricula {
+#containerMatricula {
     position: relative;
 }
 #login {
