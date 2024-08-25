@@ -28,6 +28,9 @@ document.getElementById('login').addEventListener('click', () => {
         //limpa o input após confirmar
         document.getElementById('digiteMatricula').value = "";
 
+        setTimeout(()=>{
+            formulario.submit()
+        }, 5000)
         
     } 
 

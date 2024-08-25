@@ -10,11 +10,11 @@
 </head>
 <body>
     <main>
-        <form action="#" method="post" id="formulario">
+        <form action="livre.html" method="post" id="formulario">
             <h1>PONTO ELETRÔNICO</h1>
         
             <label for="digiteMatricula"><h2>Digite sua matrícula</h2></label>
-            <input type="number" id="digiteMatricula" autocomplete="off" >
+            <input type="number" id="digiteMatricula" autocomplete="off" required>
             <button id="login" type="button"><img id="logar" src="img/login.png" alt=""></button>
 
             <div id="numeros">
@@ -45,17 +45,20 @@
             <div id="todo">
                 <div id="tempo">
                     <img src="img/clock-history 1.png" id="clock">
-                    <p id="hourParagraph" class="timeParagraph"></p>
+                    <p id="hourParagraph" class="timeParagraph">00h 00min</p>
                 </div>
             </div>
                 <p id="containerData" class="timeParagraph"></p>
             
             <div id="containerPersonBadge">
                 <img src="img/person-badge-fill 1.png" id="person_badge">
-
+                <div id="funcionario">
+                        <p id="usuario">Gabriel Rocha</p>
+                        <p id="funcao">Desenvolvedor Web</p>
+                </div>
+            </div>
             <div id="containerBookmark">
                 <img src="img/building-fill 2.png" id="bookmark">
-            </div>
             </div>
         </aside>
     </main>

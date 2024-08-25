@@ -162,10 +162,36 @@ footer img{
 }
 
 /* ------------------------------------- */
+#containerPersonBadge {
+    margin: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#funcionario {
+    width: 24vw;
+    display: block;
+    color: gray;
+    justify-content: center;
+    text-align: center;
+}
+#usuario {
+    font-size: 3.5vw;
+    font-weight: bold;
+}
+#funcao {
+    font-size: 2vw;
+}
+#person_badge {
+    margin: 1px;
+    filter: grayscale(100%);
+}
+
 #containerPersonBadge, #containerBookmark {
     margin: 5vw;
 }
-#person_badge, #bookmark {
-    display: block;
+#containerBookmark, #bookmark {
     margin: auto;
+    margin-left: 145px;
+
 }
