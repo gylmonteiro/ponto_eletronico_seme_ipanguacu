@@ -13,13 +13,11 @@
         <form action="{% static "page/entrada.html" %}" method="post" id="formulario">
             {% csrf_token %}
             <h1>PONTO ELETRÔNICO</h1>
-        
             <label for="digiteMatricula"><h2>Digite sua matrícula</h2></label>
             <div id="containerMatricula">
                 <input type="number" name="matricula" id="digiteMatricula" autocomplete="off" required>
                 <button id="login"><img id="logar" src="{% static 'img/login.png' %}"></button>
             </div>            
-            
             <div id="numeros">
                 <input type="button" class="tecladoNumerico" value="1" id="numeroUm">
                 <input type="button" class="tecladoNumerico" value="2" id="numeroDois">
@@ -38,7 +36,6 @@
                 <p>DESENVOLVIDO POR Gm Tech <br> <strong id="anoAtual"><!--RECEBE O ANO ATUAL--></strong></p>
             </footer>
         </form>
-
         <aside>
             <img src="{% static 'img/logoIpanguacu.png' %}" id="logoIpanguacu">
             <p id="livre"><img src="{% static 'img/arrow.png' %}">LIVRE</p>
