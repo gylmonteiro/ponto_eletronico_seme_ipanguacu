@@ -7,7 +7,11 @@ def entrada(request):
 
     if request.method == "POST":
         matricula = request.POST.get("matricula")
+
         print(matricula)
-    return render(request, "entrada.html")
-    return render(request, "ponto/livre.html")
+    
+        # Já peguei a pessoa através da matricula
+        nome = "Gabriel"
+        funcao = "Instrutor"
+    return render(request, "entrada.html", {'nome': nome, 'instrutor': funcao })
 
