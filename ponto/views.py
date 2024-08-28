@@ -9,3 +9,5 @@ def entrada(request):
         matricula = request.POST.get("matricula")
         print(matricula)
     return render(request, "entrada.html")
+    return render(request, "ponto/livre.html")
+
