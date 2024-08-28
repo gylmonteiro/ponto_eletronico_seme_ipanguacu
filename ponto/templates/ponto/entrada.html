@@ -1,60 +1,19 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+{% block style %}
+    <link rel="stylesheet" href="{% static "css/style_entrada.css" %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Controle de Ponto</title>
-    <style>
-        #livre {
-            background-color: #0E3F6A;
-        }
-        #hourParagraph {
-            color: #0E3F6A;
-        }
-        #containerPersonBadge {
-            display: flex;
-            margin: 60px;
-            align-items: center;
-            justify-content: center;
-        }
-        #funcionario {
-            width: 24vw;
-            display: block;
-            color: gray;
-            justify-content: center;
-            text-align: center;
-        }
-        p.usuario {
-            font-size: 3.5vw;
-            font-weight: bold;
-        }
-        p.funcao {
-            font-size: 2vw;
-        }
-        #person_badge {
-            margin: 1px;
-            filter: grayscale(100%);
-        }
-        #footerImg {
-            display: block;
-            margin: auto;
-        }
-        footer {
-            background: none;
-        }
-    </style>
-</head>
-<body>
+{% endblock style %}
+
+{% block main %}
     <main>
-        <form action="page/saida.html" method="post" id="formulario">
+        <form action="{% url "saida" %}" method="POST" id="formulario">
             <h1>PONTO ELETRÔNICO</h1>
             <label for="digiteMatricula"><h2>Digite sua senha</h2></label>
             <div id="containerMatricula">
                 <input type="number" name="senha" id="digiteMatricula" autocomplete="off" required>
-                <button id="login"><img id="logar" src="{% static 'img/login.png' %}"></button>
+                <button type="submit" id="login"><img id="logar" src="{% static 'img/login.png' %}"></button>
             </div>            
             <div id="numeros">
                 <input type="button" class="tecladoNumerico" value="1" id="numeroUm">
@@ -71,7 +30,7 @@
                 <input type="button" value="⌫" id="backspace">
             </div>
             <footer>
-                 <img src="{% static 'img/logoIpanguacu.png' %}" id="footerImg">
+                <img src="{% static 'img/logoIpanguacu.png' %}" id="footerImg">
             </footer>
         </form>
         <aside>
@@ -87,8 +46,8 @@
             <div id="containerPersonBadge">
                 <img src="{% static 'img/person-badge.png' %}" id="person_badge">
                 <div id="funcionario">
-                    <p class="usuario">Paulo Henrique Felipe Fagundes</p>
-                    <p class="funcao">Desenvolvedor de Software</p>
+                    <p class="usuario">{{nome_usuario}}</p>
+                    <p class="funcao">{{funcao_usuario}}</p>
                 </div>
             </div>
             <div id="containerBookmark">
@@ -96,11 +55,13 @@
             </div>
         </aside>
     </main>
+{% endblock main %}
+    
+{% block script %}
     <!-- SCRIPTS -->
     <script src="{% static 'scripts/dia.js' %}"></script>
     <script src="{% static 'scripts/horas.js' %}"></script>
-    <script src="{% static 'scripts/aprov.js' %}"></script>
+    {% comment %} <script src="{% static 'scripts/aprov.js' %}"></script> {% endcomment %}
     <script src="{% static 'scripts/anoAtual.js' %}"></script>
     <script src="{% static 'scripts/tecladoNumerico.js' %}"></script>
-</body>
-</html>
+{% endblock script %}
