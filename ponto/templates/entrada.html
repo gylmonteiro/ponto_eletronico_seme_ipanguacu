@@ -1,52 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Controle de Ponto</title>
-    <style>
-        #livre {
-            background-color: #0E3F6A;
-        }
-        #hourParagraph {
-            color: #0E3F6A;
-        }
-        #containerPersonBadge {
-            display: flex;
-            margin: 60px;
-            align-items: center;
-            justify-content: center;
-        }
-        #funcionario {
-            width: 24vw;
-            display: block;
-            color: gray;
-            justify-content: center;
-            text-align: center;
-        }
-        p.usuario {
-            font-size: 3.5vw;
-            font-weight: bold;
-        }
-        p.funcao {
-            font-size: 2vw;
-        }
-        #person_badge {
-            margin: 1px;
-            filter: grayscale(100%);
-        }
-        #footerImg {
-            display: block;
-            margin: auto;
-        }
-        footer {
-            background: none;
-        }
-    </style>
-</head>
-<body>
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static "ponto/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "ponto/css/style_entrada.css" %}">
+{% endblock style %}
+
+{% block main %}
+
     <main>
         <form action="page/saida.html" method="post" id="formulario">
             <h1>PONTO ELETRÔNICO</h1>
@@ -70,7 +31,7 @@
                 <input type="button" value="⌫" id="backspace">
             </div>
             <footer>
-                 <img src="../img/logoIpanguacu.png" id="footerImg">
+                <img src="../img/logoIpanguacu.png" id="footerImg">
             </footer>
         </form>
         <aside>
@@ -95,11 +56,14 @@
             </div>
         </aside>
     </main>
-    <!-- SCRIPTS -->
-    <script src="../scripts/dia.js"></script>
-    <script src="../scripts/horas.js"></script>
-    <script src="../scripts/aprov.js"></script>
-    <script src="../scripts/anoAtual.js"></script>
-    <script src="../scripts/tecladoNumerico.js"></script>
-</body>
-</html>
+{% endblock main %}
+
+
+{% block script %}
+        <script src="{% static 'ponto/js/dia.js' %}"></script>
+        <script src="{% static 'ponto/js/horas.js' %}"></script>
+        {% comment %} <script src="{% static 'ponto/js/aprov.js' %}"></script> {% endcomment %}
+        <script src="{% static 'ponto/js/anoAtual.js' %}"></script>
+        <script src="{% static 'ponto/js/tecladoNumerico.js' %}"></script>
+{% endblock script %}
+
